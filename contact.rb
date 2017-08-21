@@ -27,13 +27,6 @@ end
   end
 
 
-#reader + writer method in one (shortcut)
-  attr_accessor :note
-
-#reader
-  attr_reader :email
-
-#attr_writer is a shortcut for writer method
 
   # This method should call the initializer,
   # store the newly created contact, and then return it
