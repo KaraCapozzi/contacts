@@ -1,3 +1,9 @@
+gem 'activerecord', '=4.2.7'
+require 'active_record'
+require 'mini_record'
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'crm.sqlite3')
+
 class Contact
   @@contacts = []
   @@id = 1
@@ -42,8 +48,8 @@ end
 
   # This method should accept an id as an argument
   # and return the contact who has that id
-  def self.find
-
+  def self.find(id)
+    return id = @@id
   end
 
   # This method should allow you to specify
@@ -82,20 +88,20 @@ end
     @@contacts << new_contact
     return new_contact
   end
-
   # Feel free to add other methods here, if you need them.
 
 end
 
 
-p contact = Contact.new('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
-p Contact.create('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
+# p contact = Contact.new('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
+# p Contact.create('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
+#
+# puts Contact
+#
+# 3.times do
+#   p Contact.create('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
+# end
 
-puts Contact
-
-5.times do
-  p Contact.create('Betty', 'Maker', 'bettymakes@gmail.com', 'Loves Pokemon')
-end
 
 
 p Contact.contacts

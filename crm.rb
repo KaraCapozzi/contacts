@@ -1,8 +1,10 @@
+require_relative 'contact'
+
 class CRM
 
-  def initialize
-
-  end
+  # def initialize
+  #
+  # end
 
   def main_menu
     while true # repeat indefinitely
@@ -37,7 +39,7 @@ class CRM
 end
 
   def add_new_contact
-
+    Contact.new
   end
 
   def modify_existing_contact
@@ -56,5 +58,8 @@ end
 
   end
 
-
 end
+
+
+crm = CRM.new
+crm.main_menu
